@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cardápio | NutriTruck</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* MENU */
+
+header{
+    width:100%;
+    padding:25px 8%;
+    background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    color:#8BFF3D;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#8BFF3D;
+}
+
+/* HERO */
+
+.hero{
+    padding:100px 8% 60px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#bdbdbd;
+    max-width:700px;
+    line-height:1.8;
+}
+
+/* CATEGORIAS */
+
+.categories{
+    display:flex;
+    gap:20px;
+    padding:0 8% 50px;
+    overflow:auto;
+}
+
+.category{
+    background:#1a1a1a;
+    padding:14px 28px;
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.category:hover{
+    background:#8BFF3D;
+}
+
+.category:hover a{
+    color:black;
+}
+
+.category a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+/* SEÇÕES */
+
+.section{
+    padding:40px 8% 100px;
+}
+
+.section-title{
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+/* CARDS */
+
+.card{
+    background:#161616;
+    border-radius:28px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 35px rgba(0,0,0,0.5);
+}
+
+.card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:24px;
+}
+
+.tag{
+    background:#8BFF3D;
+    color:black;
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.card-content h2{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.card-content p{
+    color:#bdbdbd;
+    line-height:1.7;
+    margin-bottom:20px;
+    min-height:70px;
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.price{
+    color:#8BFF3D;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.btn{
+    background:#8BFF3D;
+    color:black;
+    border:none;
+    padding:12px 20px;
+    border-radius:40px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+nav ul{
+    display:none;
+}
+
+.section-title{
+    font-size:38px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">FOOD TRUCK FITNESS</div>
+
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="#combos">Combos</a></li>
+<li><a href="#lanches">Lanches</a></li>
+<li><a href="#saladas">Saladas</a></li>
+<li><a href="#bebidas">Bebidas</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Nosso Cardápio</h1>
+
+<p>
+Escolha entre combos fitness, hambúrgueres artesanais, saladas naturais e bebidas proteicas.
+</p>
+
+</section>
+
+<!-- CATEGORIAS -->
+
+<div class="categories">
+
+<div class="category"><a href="#combos"> Combos</a></div>
+<div class="category"><a href="#lanches">Lanches</a></div>
+<div class="category"><a href="#saladas">Saladas</a></div>
+<div class="category"><a href="#bebidas">Bebidas</a></div>
+
+</div>
+
+<!-- COMBOS -->
+
+<section class="section" id="combos">
+
+<h1 class="section-title">Combos</h1>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag">🔥 MAIS PEDIDO</div>
+<h2>Combo Power</h2>
+<p>Hambúrguer fitness + smoothie proteico + batata rústica.</p>
+
+<div class="bottom">
+<div class="price">R$ 29,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Combo Green</h2>
+<p>Wrap integral + suco detox + chips naturais.</p>
+
+<div class="bottom">
+<div class="price">R$ 26,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag">⭐ NOVO</div>
+<h2>Combo Protein</h2>
+<p>Frango grelhado, arroz integral e smoothie energético.</p>
+
+<div class="bottom">
+<div class="price">R$ 31,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Combo Energy</h2>
+<p>Sanduíche natural + bebida fitness + snack saudável.</p>
+
+<div class="bottom">
+<div class="price">R$ 27,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- LANCHES -->
+
+<section class="section" id="lanches">
+
+<h1 class="section-title">Lanches</h1>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag">🔥 MAIS PEDIDO</div>
+<h2>Hambúrguer Fit</h2>
+<p>Pão integral, carne artesanal e molho especial.</p>
+
+<div class="bottom">
+<div class="price">R$ 18,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="Shrimp Scampi Pasta Bake — Cheesy Garlic Seafood Comfort – Cook Now Recipe.jfif">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Wrap Proteico</h2>
+<p>Frango desfiado, vegetais e queijo leve.</p>
+
+<div class="bottom">
+<div class="price">R$ 17,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Sanduíche Natural</h2>
+<p>Pão integral com peito de peru e salada fresca.</p>
+
+<div class="bottom">
+<div class="price">R$ 15,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="Conheça a novidade das tapiocas coloridas - Lucilia Diniz.jfif">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Tapioca Proteica</h2>
+<p>Tapioca recheada com frango e queijo light.</p>
+
+<div class="bottom">
+<div class="price">R$ 16,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Frango Crocante Fit</h2>
+<p>Filé crocante assado com molho especial.</p>
+
+<div class="bottom">
+<div class="price">R$ 19,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Pão Australiano Fit</h2>
+<p>Pão premium com hambúrguer artesanal fitness.</p>
+
+<div class="bottom">
+<div class="price">R$ 21,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="3 Ways to Serve Grilled Hot Dogs.jfif">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Hot Dog Fitness</h2>
+<p>Salsicha artesanal, molho natural e pão integral.</p>
+
+<div class="bottom">
+<div class="price">R$ 17,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="delicious sweet potato black bean burgers.jfif" height="">
+
+<div class="card-content">
+<div class="tag">🔥 MAIS PEDIDO </div>
+<h2>Burger Vegano</h2>
+<p>Hambúrguer vegetal com ingredientes naturais.</p>
+
+<div class="bottom">
+<div class="price">R$ 20,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SALADAS -->
+
+<section class="section" id="saladas">
+
+<h1 class="section-title">Saladas</h1>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Salada Detox</h2>
+<p>Vegetais frescos, proteína grelhada e molho natural.</p>
+
+<div class="bottom">
+<div class="price">R$ 22,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag">⭐ NOVO</div>
+<h2>Caesar Fit</h2>
+<p>Alface, frango grelhado e molho leve premium.</p>
+
+<div class="bottom">
+<div class="price">R$ 24,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Salada Tropical</h2>
+<p>Mix de frutas, vegetais e molho cítrico.</p>
+
+<div class="bottom">
+<div class="price">R$ 23,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Salada Protein</h2>
+<p>Frango, ovos, vegetais e mix proteico.</p>
+
+<div class="bottom">
+<div class="price">R$ 25,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- BEBIDAS -->
+
+<section class="section" id="bebidas">
+
+<h1 class="section-title">Bebidas</h1>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?q=80&w=1000&auto=format&fit=crop">
+
+<div class="card-content">
+<div class="tag">🔥 MAIS PEDIDO</div>
+<h2>Smoothie Protein</h2>
+<p>Banana, whey protein e pasta de amendoim.</p>
+
+<div class="bottom">
+<div class="price">R$ 14,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="download.jfif">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Suco Detox</h2>
+<p>Couve, limão, gengibre e hortelã natural.</p>
+
+<div class="bottom">
+<div class="price">R$ 10,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="Refreshing Lemon Iced Tea Recipe _ Easy & Perfect Summer Drink.jfif">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Chá Gelado</h2>
+<p>Chá natural refrescante com limão.</p>
+
+<div class="bottom">
+<div class="price">R$ 9,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="download (1).jfif">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Suco Natural</h2>
+<p>Banana, aveia e leite proteico.</p>
+
+<div class="bottom">
+<div class="price">R$ 13,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="download (2).jfif">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Café Proteico</h2>
+<p>Café gelado com whey e leite premium.</p>
+
+<div class="bottom">
+<div class="price">R$ 15,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="A letter a with flowers and leaves_ _ Premium AI-generated image.jfif">
+
+<div class="card-content">
+<div class="tag"></div>
+<h2>Shake Morango</h2>
+<p>Shake cremoso de morango com proteína.</p>
+
+<div class="bottom">
+<div class="price">R$ 16,90</div>
+<button class="btn">Comprar</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+# conhecer.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conheça o NutriTruck</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    padding:25px 8%;
+    background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    color:#8BFF3D;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#8BFF3D;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 8%;
+    gap:60px;
+}
+
+.left{
+    flex:1;
+}
+
+.left span{
+    color:#8BFF3D;
+    letter-spacing:3px;
+    font-weight:600;
+}
+
+.left h1{
+    font-size:78px;
+    line-height:1;
+    margin:25px 0;
+}
+
+.left p{
+    color:#bdbdbd;
+    line-height:1.9;
+    margin-bottom:40px;
+    max-width:650px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    padding:16px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.green{
+    background:#8BFF3D;
+    color:black;
+}
+
+.dark{
+    border:1px solid rgba(255,255,255,0.2);
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* IMAGE */
+
+.right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.right img{
+    width:100%;
+    max-width:650px;
+    border-radius:35px;
+    object-fit:cover;
+    box-shadow:0 25px 40px rgba(0,0,0,0.5);
+}
+
+/* INFO CARDS */
+
+.info{
+    padding:0 8% 120px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#161616;
+    border-radius:30px;
+    padding:35px;
+    border:1px solid rgba(255,255,255,0.06);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h2{
+    margin:20px 0;
+    font-size:30px;
+}
+
+.card p{
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+.icon{
+    font-size:45px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:980px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.left h1{
+    font-size:52px;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">NUTRITRUCK</div>
+
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="cardapio.html">Cardápio</a></li>
+<li><a href="endereco.html">Localização</a></li>
+<li><a href="loja.html">Loja</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="left">
+
+<span>FOOD TRUCK FITNESS</span>
+
+<h1>
+Conheça o<br>
+NutriTruck
+</h1>
+
+<p>
+O NutriTruck nasceu com a proposta de unir alimentação saudável, praticidade e um visual moderno. Nosso food truck oferece hambúrgueres fitness, bebidas proteicas, suplementos e refeições saudáveis em diferentes pontos de Mongaguá.
+</p>
+
+<div class="buttons">
+<a href="cardapio.html" class="btn green">Ver Cardápio</a>
+<a href="endereco.html" class="btn dark">Nossa Localização</a>
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=1200&auto=format&fit=crop" alt="Food Truck Fitness">
+
+</div>
+
+</section>
+
+<!-- INFO -->
+
+<section class="info">
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🥗</div>
+<h2>Alimentação Saudável</h2>
+<p>
+Nosso cardápio é focado em refeições equilibradas, ingredientes frescos e opções fitness para diferentes estilos de vida.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💪</div>
+<h2>Público Fitness</h2>
+<p>
+O NutriTruck atende principalmente clientes que frequentam academias e buscam praticidade sem abrir mão da saúde.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚚</div>
+<h2>Food Truck Moderno</h2>
+<p>
+Nosso food truck circula por pontos estratégicos da cidade oferecendo uma experiência moderna e diferenciada.
+</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

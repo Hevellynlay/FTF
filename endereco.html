@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Localização | FOOD TRUCK FITNESS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* MENU */
+
+header{
+    width:100%;
+    padding:25px 8%;
+    background:#111;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    color:#8BFF3D;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#8BFF3D;
+}
+
+/* HERO */
+
+.hero{
+    padding:100px 8% 70px;
+}
+
+.hero span{
+    color:#8BFF3D;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-size:72px;
+    margin:20px 0;
+    line-height:1;
+}
+
+.hero p{
+    color:#bdbdbd;
+    max-width:700px;
+    line-height:1.8;
+}
+
+/* CARDS */
+
+.container{
+    padding:0 8% 120px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#161616;
+    border-radius:30px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.06);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+.top{
+    background:#8BFF3D;
+    color:black;
+    padding:22px;
+}
+
+.top h2{
+    font-size:32px;
+}
+
+.content{
+    padding:28px;
+}
+
+.period{
+    background:#222;
+    padding:14px;
+    border-radius:18px;
+    margin-bottom:18px;
+}
+
+.period h3{
+    color:#8BFF3D;
+    margin-bottom:8px;
+}
+
+.period p{
+    color:#d7d7d7;
+    line-height:1.7;
+}
+
+.time{
+    display:inline-block;
+    margin-top:10px;
+    background:#8BFF3D;
+    color:black;
+    padding:8px 14px;
+    border-radius:40px;
+    font-size:13px;
+    font-weight:700;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">FOOD TRUCK FINTNESS</div>
+
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="cardapio.html">Cardápio</a></li>
+<li><a href="endereco.html">Localização</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<span>ONDE ESTAMOS</span>
+
+<h1>
+ROTA SEMANAL<br>
+DO FOOD TRUCK
+</h1>
+
+<p>
+Durante o dia o Fodd truck ficará próximo de academias de Mongaguá. No período noturno, nosso food truck atende na região do Centro Praia Shopping.
+</p>
+
+</section>
+
+<!-- CARDS -->
+
+<section class="container">
+
+<!-- SEGUNDA -->
+
+<div class="card">
+
+<div class="top">
+<h2>Segunda</h2>
+</div>
+
+<div class="content">
+
+<div class="period">
+<h3>☀️ Período Diurno</h3>
+<p>
+Próximo à Academia Motion Fit - Mongaguá
+</p>
+<span class="time">08:00 às 20:30</span>
+</div>
+
+<div class="period">
+<h3>🌙 Período Noturno</h3>
+<p>
+Centro Praia Shopping - Centro, Mongaguá 
+</p>
+<span class="time">21:00 às 23:00</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- TERÇA -->
+
+<div class="card">
+
+<div class="top">
+<h2>Terça</h2>
+</div>
+
+<div class="content">
+
+<div class="period">
+<h3>☀️ Período Diurno</h3>
+<p>
+Próximo à Life Balance Academia - Mongaguá 
+</p>
+<span class="time">08:00 às 20:30</span>
+</div>
+
+<div class="period">
+<h3>🌙 Período Noturno</h3>
+<p>
+Centro Praia Shopping — Centro, Mongaguá
+</p>
+<span class="time">21:00 às 23:00</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- QUARTA -->
+
+<div class="card">
+
+<div class="top">
+<h2>Quarta</h2>
+</div>
+
+<div class="content">
+
+<div class="period">
+<h3>☀️ Período Diurno</h3>
+<p>
+Próximo à Academia Extreme Muscle - Mongaguá
+</p>
+<span class="time">08:00 às 20:30</span>
+</div>
+
+<div class="period">
+<h3>🌙 Período Noturno</h3>
+<p>
+Centro Praia Shopping — Centro, Mongaguá
+</p>
+<span class="time">21:00 às 23:00</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- QUINTA -->
+
+<div class="card">
+
+<div class="top">
+<h2>Quinta</h2>
+</div>
+
+<div class="content">
+
+<div class="period">
+<h3>☀️ Período Diurno</h3>
+<p>
+Próximo à Academia Espaço Físico Gym - Mongaguá
+</p>
+<span class="time">08:00 às 20:30</span>
+</div>
+
+<div class="period">
+<h3>🌙 Período Noturno</h3>
+<p>
+Centro Praia Shopping — Centro, Mongaguá
+</p>
+<span class="time">21:00 às 23:00</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- SEXTA -->
+
+<div class="card">
+
+<div class="top">
+<h2>Sexta</h2>
+</div>
+
+<div class="content">
+
+<div class="period">
+<h3>☀️ Período Diurno</h3>
+<p>
+Próximo à Academia Nitro Fitness System - Mongaguá - SP
+</p>
+<span class="time">08:00 às 20:30</span>
+</div>
+
+<div class="period">
+<h3>🌙 Período Noturno</h3>
+<p>
+Centro Praia Shopping — Centro, Mongaguá 
+</p>
+<span class="time">21:00 às 23:00</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- SABADO -->
+
+<div class="card">
+
+<div class="top">
+<h2>Sábado</h2>
+</div>
+
+<div class="content">
+
+<div class="period">
+<h3>☀️ Período Especial</h3>
+<p>
+Próximo à Summer Go Academia - Mongaguá
+</p>
+<span class="time">09:00 às 18:00</span>
+</div>
+
+<div class="period">
+<h3>🌙 Período Noturno</h3>
+<p>
+Centro Praia Shopping — Centro, Mongaguá
+</p>
+<span class="time">19:00 às 23:00</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
+

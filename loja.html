@@ -1,0 +1,408 @@
+# loja.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loja | NutriTruck</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+header{
+    width:100%;
+    padding:25px 8%;
+    background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    color:#8BFF3D;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#8BFF3D;
+}
+
+.hero{
+    padding:100px 8% 60px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#bdbdbd;
+    max-width:700px;
+    line-height:1.8;
+}
+
+.categories{
+    display:flex;
+    gap:20px;
+    padding:0 8% 50px;
+    overflow:auto;
+}
+
+.category{
+    background:#1a1a1a;
+    padding:14px 28px;
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.category a{
+    text-decoration:none;
+    color:white;
+}
+
+.section{
+    padding:40px 8% 100px;
+}
+
+.section-title{
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#161616;
+    border-radius:28px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 35px rgba(0,0,0,0.5);
+}
+
+.card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:24px;
+}
+
+.tag{
+    background:#8BFF3D;
+    color:black;
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.card-content h2{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.card-content p{
+    color:#bdbdbd;
+    line-height:1.7;
+    margin-bottom:20px;
+    min-height:70px;
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.price{
+    color:#8BFF3D;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.btn{
+    background:#8BFF3D;
+    color:black;
+    border:none;
+    padding:12px 20px;
+    border-radius:40px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">NUTRITRUCK</div>
+
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="cardapio.html">Cardápio</a></li>
+<li><a href="endereco.html">Localização</a></li>
+<li><a href="#garrafas">Garrafas</a></li>
+<li><a href="#suplementos">Suplementos</a></li>
+<li><a href="#acessorios">Acessórios</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Loja NutriTruck</h1>
+
+<p>
+Conheça nossos produtos fitness exclusivos, suplementos premium e acessórios esportivos.
+</p>
+
+</section>
+
+<div class="categories">
+
+<div class="category"><a href="#garrafas">🥤 Garrafas</a></div>
+<div class="category"><a href="#suplementos">💪 Suplementos</a></div>
+<div class="category"><a href="#acessorios">🎒 Acessórios</a></div>
+
+</div>
+
+<!-- GARRAFAS -->
+
+<section class="section" id="garrafas">
+
+<h1 class="section-title">Garrafas Fitness</h1>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
+<div class="tag">🔥 PREMIUM</div>
+<h2>Garrafa Black</h2>
+<p>Garrafa térmica premium fosca 700ml.</p>
+<div class="bottom">
+<div class="price">R$ 49,90</div>
+<button class="btn">Comprar</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
+<div class="tag">⭐ NOVA</div>
+<h2>Garrafa Neon</h2>
+<p>Modelo esportivo com design moderno fitness.</p>
+<div class="bottom">
+<div class="price">R$ 44,90</div>
+<button class="btn">Comprar</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
+<div class="tag">💪 FIT</div>
+<h2>Shake Bottle</h2>
+<p>Coqueteleira profissional para suplementos.</p>
+<div class="bottom">
+<div class="price">R$ 39,90</div>
+<button class="btn">Comprar</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
+<div class="tag">🥤 SPORT</div>
+<h2>Hydra Bottle</h2>
+<p>Garrafa esportiva resistente para academia.</p>
+<div class="bottom">
+<div class="price">R$ 54,90</div>
+<button class="btn">Comprar</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SUPLEMENTOS -->
+
+<section class="section" id="suplementos">
+
+<h1 class="section-title">Suplementos</h1>
+
+<div class="grid">
+
+<div class="card"><img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">WHEY</div><h2>Whey Chocolate</h2><p>Proteína premium sabor chocolate.</p><div class="bottom"><div class="price">R$ 89,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">WHEY</div><h2>Whey Morango</h2><p>Whey cremoso sabor morango.</p><div class="bottom"><div class="price">R$ 92,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">WHEY</div><h2>Whey Baunilha</h2><p>Alta proteína com sabor suave.</p><div class="bottom"><div class="price">R$ 87,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">WHEY</div><h2>Whey Cookies</h2><p>Sabor cookies com cream fitness.</p><div class="bottom"><div class="price">R$ 94,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1579722821273-0f6c1f70d7a6?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">CREATINA</div><h2>Creatina Black</h2><p>Creatina pura para alta performance.</p><div class="bottom"><div class="price">R$ 69,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1579722821273-0f6c1f70d7a6?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">CREATINA</div><h2>Creatina Turbo</h2><p>Maior explosão e resistência muscular.</p><div class="bottom"><div class="price">R$ 74,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1579722821273-0f6c1f70d7a6?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">CREATINA</div><h2>Creatina Max</h2><p>Auxílio completo para hipertrofia.</p><div class="bottom"><div class="price">R$ 79,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1579722821273-0f6c1f70d7a6?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">CREATINA</div><h2>Creatina Hardcore</h2><p>Creatina intensa para treinos pesados.</p><div class="bottom"><div class="price">R$ 84,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">BARRA</div><h2>Barra Chocolate</h2><p>Snack proteico sabor chocolate.</p><div class="bottom"><div class="price">R$ 12,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">BARRA</div><h2>Barra Banana</h2><p>Barra energética sabor banana.</p><div class="bottom"><div class="price">R$ 11,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">BARRA</div><h2>Barra Cookies</h2><p>Proteína com sabor cookies.</p><div class="bottom"><div class="price">R$ 13,90</div><button class="btn">Comprar</button></div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop"><div class="card-content"><div class="tag">BARRA</div><h2>Barra Morango</h2><p>Barra fitness sabor morango.</p><div class="bottom"><div class="price">R$ 12,90</div><button class="btn">Comprar</button></div></div></div>
+
+</div>
+
+</section>
+
+<!-- ACESSORIOS -->
+
+<section class="section" id="acessorios">
+
+<h1 class="section-title">Acessórios</h1>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
+<div class="tag">🎒 FITNESS</div>
+<h2>Bolsa Fitness Black</h2>
+<p>Bolsa premium resistente para academia.</p>
+<div class="bottom">
+<div class="price">R$ 89,90</div>
+<button class="btn">Comprar</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
+<div class="tag">🔥 SPORT</div>
+<h2>Bolsa Sport</h2>
+<p>Modelo esportivo moderno e espaçoso.</p>
+<div class="bottom">
+<div class="price">R$ 79,90</div>
+<button class="btn">Comprar</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
+<div class="tag">🥤 HOLDER</div>
+<h2>Suporte Hydra</h2>
+<p>Suporte ajustável para garrafas fitness.</p>
+<div class="bottom">
+<div class="price">R$ 29,90</div>
+<button class="btn">Comprar</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
+<div class="tag">⭐ PREMIUM</div>
+<h2>Porta Garrafa Pro</h2>
+<p>Porta garrafa esportivo premium resistente.</p>
+<div class="bottom">
+<div class="price">R$ 34,90</div>
+<button class="btn">Comprar</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
+```
